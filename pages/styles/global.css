@@ -3,7 +3,7 @@
    
   }
   .App-header{
-    background-color: black;
+    background-color: rgb(82, 64, 187);
     height: 70px;
     display: flex;
     flex-direction: column;
@@ -104,31 +104,52 @@
   }
 
   /* [movie] styles */
-  .contentOverview{
-    margin-top: 5em;
-    margin-left: 5em;
-    margin-right: 3em;
+
+  .overview{
+    margin-left: 2em;
   }
+  
   .content{
     display: grid;
     grid-template-columns: 1fr 2fr;
+    justify-content: space-between;
+    grid-gap: 5em;    
+    align-items: center;
+    margin: auto;
+  }
+  .searched-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .contentSecondColumn{
     padding: 2em;
+
   }
+.row{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
   .plot{
+    
     font-size: larger;
+    margin-top: 4em;
   }
   
   @media screen and (min-width: 694px) and (max-width: 915px) {
     .movie{
       max-width: 33%;
     }
+    
+    
   }
   @media screen and (min-width: 652px) and (max-width: 693) {
     .movie{
       max-width: 50%;
     }
+    
+    
   }
   
   @media screen and (max-width: 651px) {
@@ -136,4 +157,16 @@
         max-width: 100%;
         margin: auto;
       }
+      
+      
   }
+  @media screen and (max-width: 600px) {
+    
+    .content, .row{
+      display: block;
+    }
+    .plot{
+      margin-top: 1em;
+    }
+    
+}

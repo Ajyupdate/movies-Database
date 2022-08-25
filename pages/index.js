@@ -4,7 +4,7 @@ import Header from "../component/Header"
 import Movie from "../component/Movie"
 import Search from "../component/Search"
 
-export const name = "captain america"
+export const name = "Captain America"
 function Home (props){
   const movies = props.movies.Search
   
@@ -29,10 +29,7 @@ function Home (props){
         console.log(jsonResponse.Search)
         
         
-      })
-      
-      
-      
+      })      
   }
   
   return (
