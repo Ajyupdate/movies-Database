@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React, { useState } from 'react'
 
 
@@ -23,13 +24,15 @@ const Search = (props) => {
   return (
       <div>
         <form className='search'>
+           
             <input
                 value={searchValue}
                 onChange={handleSearchInputChanges}
                 type="text"
             />
+             <Link href={`/search/${searchValue}`}>
             <input onClick={callSearchFunction} type="submit" value="SEARCH"/>
-            
+            </Link>
         </form>
 
         {/* <div>

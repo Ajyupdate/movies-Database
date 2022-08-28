@@ -10,8 +10,12 @@ function Details({searchedMovie}) {
                 rating.Value
             )
         }
+        else if(rating.Source !== "Rotten Tomatoes"){
+            return("")
+        }
         
     })
+    console.log(rottenTomatoeRating)
    
     
   return (
@@ -24,61 +28,62 @@ function Details({searchedMovie}) {
                 <div className='searched-img'>
                     
                     <img
-                        alt={`The movie titled: ${searchedMovie.Title}`}
+                        alt={` ${searchedMovie.Title} poster not available`}
                         src={searchedMovie.Poster === "N/A" ? 'movie Title not available' : searchedMovie.Poster}
                     />
                 </div>
 
                 <div className='contentSecondColumn'>
 
-                    <div>
+                    <div className='propDIv'>
+                        <h4>Plot</h4>
                         <p className='plot'>{searchedMovie.Plot === "N/A" ? 'Plot not available' : searchedMovie.Plot}</p>
                     </div>
                     
                     <div className='row'>
 
-                        <div className='director'>
+                        <div className='propDIv'>
                             <h4>Director</h4>
                             {searchedMovie.Director === "N/A" ? 'Director not available' : searchedMovie.Director}
                         </div>
 
-                        <div className='screenPlayWriters'>
+                        <div className='propDIv'>
                             <h4>Screenplay Writers</h4>
                             {searchedMovie.Writer === "N/A" ? 'Writer not available' : searchedMovie.Writer}
                         </div>
                     </div>
 
                     <div className='row'>
-                        <div className='Released'>
+                        <div className='propDIv'>
                             <h4>Released date</h4>
-                            {searchedMovie.Released === "N/A" ? 'Released not available' : searchedMovie.Released}
+                            {searchedMovie.Released === "N/A" ? 'Released date not available' : searchedMovie.Released}
                         </div>
 
-                        <div className='BoxOffice'>
-                            <h4>BoxOffice date</h4>
+                        <div className='propDIv'>
+                            <h4>BoxOffice</h4>
                             {searchedMovie.BoxOffice === "N/A" ? 'Box Office figure not available' : searchedMovie.BoxOffice}
                         </div>
                         
-                        <div className='Rating'>
+                        <div className='propDIv'>
                             <h4>Rotten Tomatoe Rating</h4>
                             
-                            {rottenTomatoeRating === "N/A" ? 'Rotten Tomatoe rating not available' : rottenTomatoeRating}
+                            {rottenTomatoeRating =="" ? 'Rotten Tomatoe rating not available' : rottenTomatoeRating}
                         </div>
                     </div>
 
                     <div className='row'>
-                        <div className='Genre'>
+                        <div className='propDIv'>
                             <h4>Genre</h4>
                             {searchedMovie.Genre === "N/A" ? 'Genre not available' :searchedMovie.Genre}
                         </div>
 
-                        <div className='Awards'>
+                        <div className='propDIv'>
                             <h4>Awards</h4>
                             {searchedMovie.Awards === "N/A" ? 'Awards not available' : searchedMovie.Awards}
                         </div>
                     </div>
                     
-                    <div className='Actors row'>
+                    <div className='propDIv'>
                         <div>
                         <h4>Actors</h4>
                         {searchedMovie.Actors === "N/A" ? 'Actors not available' : searchedMovie.Actors}
