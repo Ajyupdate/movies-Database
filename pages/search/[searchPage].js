@@ -1,14 +1,31 @@
 import {useRouter} from 'next/router'
+import Header from '../../component/Header'
+import Movie from '../../component/Movie'
+import Search from '../../component/Search'
 function searchedMovie({searchedMovie}){
+    console.log(searchedMovie)
     const router = useRouter()
 
     if(router.isFallback){
         return <h1>Loading</h1>
     }    
 
-    console.log(searchedMovie)
+    
     return(
-        <div>hi</div>
+        <div className='App'>
+            <Header title="Movie Database"/>
+            <Search/>
+            <div className='movies'>
+                {searchedMovie.Search.map((movie) =>(
+                <div key={movie.imdbID}>
+            
+                    <Movie searchedMovie={searchedMovie} movie={movie} Title={movie.Title}/>
+            
+                </div>
+            ))}
+            </div>
+            
+        </div>
     )
 }
 
@@ -16,12 +33,12 @@ export default searchedMovie
 
 export async function getStaticPaths(){ 
     
-    const response = await fetch(`https://www.omdbapi.com/?t=avengers&apikey=4a3b711b`)
+    const response = await fetch(`https://www.omdbapi.com/?s=avengers&apikey=4a3b711b`)
     const data = await response.json()
     return{
         paths: [
             {
-                params: {search: 'Captain America: Civil War'},
+                params: {searchPage: 'avengers'},
             },
         ],
         
@@ -32,7 +49,8 @@ export async function getStaticPaths(){
 export async function getStaticProps(context){
     
     const {params} = context
-    const response = await fetch(`https://www.omdbapi.com/?s=${params.search}&apikey=4a3b711b`)
+    console.log(params)
+    const response = await fetch(`https://www.omdbapi.com/?s=${params.searchPage}&apikey=4a3b711b`)
     const data = await response.json()
      
     

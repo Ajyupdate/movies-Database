@@ -60,7 +60,7 @@ function Details({searchedMovie}) {
                         </div>
 
                         <div className='propDIv'>
-                            <h4>BoxOffice</h4>
+                            <h4>USA BoxOffice</h4>
                             {searchedMovie.BoxOffice === "N/A" ? 'Box Office figure not available' : searchedMovie.BoxOffice}
                         </div>
                         

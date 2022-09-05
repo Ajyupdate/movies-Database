@@ -10,34 +10,14 @@ function Home (props){
   
 
   const [movieList, setMoviesList] = useState(movies)
-  console.log(movieList)
-  
 
-  const search = searchValue => {
-    
-    fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=4a3b711b`)
-    
-      
-      .then(response => {
-        if(!response.ok){
-          throw Error("could not get list check your internet setting")
-        }
-        return response.json()
-      })
-      .then(jsonResponse => {
-        setMoviesList(jsonResponse.Search);
-        console.log(jsonResponse.Search)
-        
-        
-      })      
-  }
   
   return (
     <>
       
       <div className='App'>
         <Header title="Movie Database"/>
-        <Search search={search}/>
+        <Search />
 
       <div className='movies'>
         {movieList.map((movie) =>(
@@ -57,7 +37,7 @@ function Home (props){
 export default Home
 
 export async function getStaticProps(){
-  const response = await fetch(`https://www.omdbapi.com/?s=${name}&apikey=4a3b711b`)
+  const response = await fetch(`https://www.omdbapi.com/?s=${name}&page=1&apikey=4a3b711b`)
   const data = await response.json()
   
   return{
