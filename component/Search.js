@@ -16,11 +16,11 @@ const Search = (props) => {
         setSearchValue("")
     }
 
-    const callSearchFunction = (e) => {
-        e.preventDefault();
-        props.search(searchValue)
-        resetInputField();
-    }
+    // const callSearchFunction = (e) => {
+    //     e.preventDefault();
+    //     props.search(searchValue)
+    //     resetInputField();
+    // }
   return (
       <div>
         <form className='search'>
@@ -31,7 +31,7 @@ const Search = (props) => {
                 type="text"
             />
              <Link href={`/search/${searchValue}`}>
-            <input onClick={callSearchFunction} type="submit" value="SEARCH"/>
+            <input  type="submit" value="SEARCH"/>
             </Link>
         </form>
 
