@@ -9,7 +9,7 @@ function movie({searchedMovie}) {
     // console.log(searchedMovie)
     const router = useRouter()
     if(router.isFallback){
-        return <h1>Loading</h1>
+        return <h1>Loading... please wait</h1>
     }    
 
     
@@ -42,6 +42,7 @@ export async function getStaticProps(context){
     
     const {params} = context
     const response = await fetch(`https://www.omdbapi.com/?t=${params.movie}&plot=full&apikey=4a3b711b`)
+    
     const data = await response.json()
      
     

@@ -3,7 +3,7 @@ import Header from '../../component/Header'
 import Movie from '../../component/Movie'
 import Search from '../../component/Search'
 function searchedMovie({searchedMovie}){
-    console.log(searchedMovie)
+    
     const router = useRouter()
 
     if(router.isFallback){
@@ -42,7 +42,7 @@ export async function getStaticPaths(){
             },
         ],
         
-        fallback: true,
+        fallback: blocking,
     }
 }
 

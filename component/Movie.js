@@ -10,7 +10,7 @@ const Movie = ({ movie}) => {
       movie.Poster === "N/A" ? DEFAULT_PLACEHOLDER_IMAGE : movie.Poster;
   return (
     // <Link href={`/${movie.Title}`}>
-    <div className='movie' >
+    <div className='movie' data-aos="fade-up">
       
         <h2 className="movie-title">{movie.Title}</h2>
         
