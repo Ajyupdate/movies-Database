@@ -15,8 +15,7 @@ function Details({searchedMovie}) {
         }
         
     })
-    console.log(rottenTomatoeRating)
-   
+    
     
   return (
     <div>

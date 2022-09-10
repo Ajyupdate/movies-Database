@@ -3,6 +3,21 @@ import { useState } from "react"
 import Header from "../component/Header"
 import Movie from "../component/Movie"
 import Search from "../component/Search"
+import Aos from "aos"
+import 'aos/dist/aos.css';
+import Head from "next/head"
+
+
+if (typeof window !== 'undefined') {
+  Aos.init(
+    {
+      
+      duration:3000,
+      
+  }
+  );
+  
+}
 
 export const name = "Captain America"
 function Home (props){
@@ -12,22 +27,29 @@ function Home (props){
   const [movieList, setMoviesList] = useState(movies)
 
   
+
+  
   return (
     <>
       
-      <div className='App'>
+      <div className='App' >
+        <Head>
+          <title>Movie Database</title>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        </Head>
         <Header title="Movie Database"/>
         <Search />
 
-      <div className='movies'>
-        {movieList.map((movie) =>(
-          <div key={movie.imdbID}>
-          
-            <Movie movieList={movieList} movie={movie} Title={movie.Title}/>
-          
-          </div>
-        ))}
-      </div>
+        <div className='movies' >
+          {movieList.map((movie) =>(
+            <div key={movie.imdbID}>
+            
+              <Movie movieList={movieList} movie={movie} Title={movie.Title}/>
+            
+            </div>
+          ))}
+        </div>
+        
       
     </div>
     </>
@@ -37,8 +59,12 @@ function Home (props){
 export default Home
 
 export async function getStaticProps(){
-  const response = await fetch(`https://www.omdbapi.com/?s=${name}&page=1&apikey=4a3b711b`)
-  const data = await response.json()
+  const response = await fetch(`https://www.omdbapi.com/?s=${name}&apikey=4a3b711b`)
+  console.log(response)
+  
+    const data = await response.json()
+ 
+    
   
   return{
     props: {
