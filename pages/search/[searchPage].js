@@ -42,7 +42,7 @@ export async function getStaticPaths(){
             },
         ],
         
-        fallback: blocking,
+        fallback: true,
     }
 }
 
@@ -52,7 +52,7 @@ export async function getStaticProps(context){
     console.log(params)
     const response = await fetch(`https://www.omdbapi.com/?s=${params.searchPage}&apikey=4a3b711b`)
     const data = await response.json()
-     
+
     
     return{
         props :{

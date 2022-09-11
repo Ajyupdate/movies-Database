@@ -12,7 +12,7 @@ if (typeof window !== 'undefined') {
   Aos.init(
     {
       
-      duration:3000,
+      duration:5000,
       
   }
   );
@@ -60,7 +60,7 @@ export default Home
 
 export async function getStaticProps(){
   const response = await fetch(`https://www.omdbapi.com/?s=${name}&apikey=4a3b711b`)
-  console.log(response)
+  
   
     const data = await response.json()
  
