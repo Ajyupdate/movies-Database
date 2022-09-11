@@ -18,10 +18,10 @@ function Details({searchedMovie}) {
     
     
   return (
-    <div>
+    <div data-aos="fade-up">
         <h2 className='App-header'>{searchedMovie.Title}</h2>
         <div className='contentOverview'>
-            <h3 className='overview'>SUMMARY</h3> 
+            <h3 className='overview' data-aos="fade-right">SUMMARY</h3> 
             <div className='content'>
                 
                 <div className='searched-img'>
