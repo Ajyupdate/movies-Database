@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Search from './Search'
 
 function Details({searchedMovie}) {
     const ratings = searchedMovie.Ratings
@@ -19,9 +20,11 @@ function Details({searchedMovie}) {
     
   return (
     <div data-aos="fade-up">
+        
         <h2 className='App-header'>{searchedMovie.Title}</h2>
         <div className='contentOverview'>
-            <h3 className='overview' data-aos="fade-right">SUMMARY</h3> 
+            
+            <Search />
             <div className='content'>
                 
                 <div className='searched-img'>
@@ -34,12 +37,13 @@ function Details({searchedMovie}) {
 
                 <div className='contentSecondColumn'>
 
-                    <div className='propDIv'>
+                    <div className='propDIv plot'>
                         <h4>Plot</h4>
-                        <p className='plot'>{searchedMovie.Plot === "N/A" ? 'Plot not available' : searchedMovie.Plot}</p>
+                        <p className=''>{searchedMovie.Plot === "N/A" ? 'Plot not available' : searchedMovie.Plot}</p>
                     </div>
                     
                     <div className='row'>
+
 
                         <div className='propDIv'>
                             <h4>Director</h4>

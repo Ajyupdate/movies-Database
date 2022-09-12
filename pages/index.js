@@ -21,6 +21,7 @@ if (typeof window !== 'undefined') {
 
 export const name = "Captain America"
 function Home (props){
+  
   const movies = props.movies.Search
   
 
@@ -58,17 +59,20 @@ function Home (props){
 
 export default Home
 
-export async function getStaticProps(){
+export async function getStaticProps(context){
+  const error = false
+  
   const response = await fetch(`https://www.omdbapi.com/?s=${name}&apikey=4a3b711b`)
+  const data = await response.json()
+
   
   
-    const data = await response.json()
+   
  
-    
-  
   return{
     props: {
-      movies: data
+      movies: data,
+      
     }
   }
 
