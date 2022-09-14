@@ -59,8 +59,8 @@ function Home (props){
 
 export default Home
 
-export async function getStaticProps(context){
-  const error = false
+export async function getStaticProps(){
+ 
   
   const response = await fetch(`https://www.omdbapi.com/?s=${name}&apikey=4a3b711b`)
   const data = await response.json()

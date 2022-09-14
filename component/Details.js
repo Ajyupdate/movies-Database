@@ -4,18 +4,18 @@ import Search from './Search'
 function Details({searchedMovie}) {
     const ratings = searchedMovie.Ratings
     const [rottenTomatoe, setRottenTomamtoe] = useState("")
-    const rottenTomatoeRating = ratings.map(rating => {
+    // const rottenTomatoeRating = ratings.map(rating => {
         
-        if(rating.Source === "Rotten Tomatoes"){
-            return(
-                rating.Value
-            )
-        }
-        else if(rating.Source !== "Rotten Tomatoes"){
-            return("")
-        }
+    //     if(rating.Source === "Rotten Tomatoes"){
+    //         return(
+    //             rating.Value
+    //         )
+    //     }
+    //     else if(rating.Source !== "Rotten Tomatoes"){
+    //         return("")
+    //     }
         
-    })
+    // })
     
     
   return (
@@ -67,11 +67,11 @@ function Details({searchedMovie}) {
                             {searchedMovie.BoxOffice === "N/A" ? 'Box Office figure not available' : searchedMovie.BoxOffice}
                         </div>
                         
-                        <div className='propDIv'>
+                        {/* <div className='propDIv'>
                             <h4>Rotten Tomatoe Rating</h4>
                             
                             {rottenTomatoeRating =="" ? 'Rotten Tomatoe rating not available' : rottenTomatoeRating}
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className='row'>
