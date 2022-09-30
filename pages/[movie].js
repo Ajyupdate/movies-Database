@@ -3,13 +3,14 @@ import { name } from '.'
 
 import {useRouter} from 'next/router'
 import Details from '../component/Details'
+import Loading from '../component/Loading'
 
 
 function movie({searchedMovie}) {
     // console.log(searchedMovie)
     const router = useRouter()
     if(router.isFallback){
-        return <h1>Loading... please wait</h1>
+        return <Loading/>
     }    
 
     

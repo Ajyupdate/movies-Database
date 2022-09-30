@@ -1,5 +1,6 @@
 import {useRouter} from 'next/router'
 import Header from '../../component/Header'
+import Loading from '../../component/Loading'
 import Movie from '../../component/Movie'
 import Search from '../../component/Search'
 function searchedMovie({searchedMovie}){
@@ -7,7 +8,7 @@ function searchedMovie({searchedMovie}){
     const router = useRouter()
 
     if(router.isFallback){
-        return <h1>Loading</h1>
+        return <Loading/>
     }    
 
     

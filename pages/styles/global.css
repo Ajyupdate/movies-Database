@@ -1,9 +1,11 @@
 .App{
     text-align: center;
+    background-color:rgb(7, 3, 27);
+    
    
   }
   .App-header{
-    background-color: rgb(7, 3, 27);
+    background-color: rgb(118, 29, 29);
     height: 70px;
     display: flex;
     flex-direction: column;
@@ -13,6 +15,7 @@
     color: white;
     padding: 20px;
     cursor: pointer;
+    
   }
   
   .spinner{
@@ -24,6 +27,32 @@
     font-size: large;
   }
   
+
+
+  .box{
+    height: 20px;
+    background-color: rgb(30, 41, 70);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 10px; 
+    color: white;
+  
+  } 
+  
+   .box > input{
+    
+    flex: 1;
+    height: 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding-left: 7px;  
+    background-color: #1E2946;
+    
+  } 
+  
+  
   /* new css for movie component */
   
   /* *{
@@ -33,7 +62,9 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    background-color:rgb(7, 3, 27);
+   
   }
   .movie-details{
     margin-top: 1em;
@@ -43,10 +74,16 @@
     margin: 0;
   }
   
-  .movie{
+  /* .movie{
     padding: 5px 25px 10px 24px;
-    
-    
+    width: 100%;
+  } */
+  .movie-title{
+    /* display: flex;
+    justify-content: center;
+    text-align: center; */
+    color: white;
+
   }
   
   
@@ -56,14 +93,15 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 10px;
-    
+    background-color:rgb(7, 3, 27);
   }
   
   input[type="submit"]{
-    padding: 5px;
-    background-color: transparent;
-    color: black;
-    border: 1px solid black;
+    /* padding: 2px; */
+    background-color: rgb(7, 3, 27);
+    color: white;
+    border: 2px solid  #1E2946;
+    border-radius: 10px;
     width: 80px;
     margin-left: 5px;
     cursor: pointer;
@@ -72,30 +110,17 @@
   
   
   
-  input[type="submit"]:hover{
-    background-color: #282c34;
+   input[type="submit"]:hover{
+    background-color: #2e57aa;
     color: antiquewhite;
   }
   
-  .search > input[type="text"]{
+   /* .search > input[type="text"]{
     width: 40%;
     min-width: 170px;
     border-radius: 1%;
-  }
-  .movie-button button:hover{
-    background-color: #282c34;
-    color: antiquewhite;
-  }
-  .movie-button button{
-    padding: 2px;
-    background-color: transparent;
-    color: black;
-    border: 1px solid black;
-    width: 80px;
-    margin-left: 5px;
-    cursor: pointer;
-    border-radius: 0.2em;
-  }
+  }  */
+  
 
   /* [movie] styles */
 
@@ -174,6 +199,9 @@
       
   }
   @media screen and (max-width: 600px) {
+  /* .movie{
+    margin-left: auto;
+  } */
     
     .content, .row{
       display: block;
