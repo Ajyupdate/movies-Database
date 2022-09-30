@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Loading from './Loading';
 import Search from './Search'
 
 function Details({searchedMovie}) {
@@ -16,6 +17,11 @@ function Details({searchedMovie}) {
     //     }
         
     // })
+
+    if (!searchedMovie) {
+		// todo: Display beautiful error component and pass message into it
+		return <Loading />;
+	}  
     
     
   return (

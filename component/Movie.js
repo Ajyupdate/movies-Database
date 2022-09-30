@@ -12,13 +12,14 @@ const Movie = ({ movie}) => {
     // <Link href={`/${movie.Title}`}>
     <div className='movie' data-aos="fade-up">
       
-        <h2 className="movie-title">{movie.Title}</h2>
+        <h4 className="movie-title">{movie.Title}</h4>
         
         <Link href={`/${movie.Title}`}>
           <a>
             <div className="movie-details">
                 <img
                     width="300"
+                    height="444"
                     alt={`The movie titled: ${movie.Title}`}
                     src={poster}
                 />
