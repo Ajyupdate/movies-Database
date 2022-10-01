@@ -19,7 +19,7 @@ function Details({searchedMovie}) {
     // })
 
     if (!searchedMovie) {
-		// todo: Display beautiful error component and pass message into it
+		
 		return <Loading />;
 	}  
     
