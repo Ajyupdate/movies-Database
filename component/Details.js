@@ -25,7 +25,7 @@ function Details({searchedMovie}) {
     
     
   return (
-    <div data-aos="fade-up">
+    <div className="detail">
         
         <h2 className='App-header'>{searchedMovie.Title}</h2>
         <div className='contentOverview'>
