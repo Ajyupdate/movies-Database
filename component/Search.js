@@ -36,7 +36,7 @@ const Search = (props) => {
 
             <div className="box">
                 
-                <input className='text-white' 
+                <input className='InputText text-white' 
                  value={searchValue}
                  onChange={handleSearchInputChanges}
                  type="text"
