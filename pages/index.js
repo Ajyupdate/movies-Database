@@ -17,14 +17,9 @@ import Loading from "../component/Loading"
 //   );
 // }
 
-export const name = "Captain America"
+export const name = "Batman"
 function Home (props){
-  
-  
-  
-
-  
-  
+ 
 
   const movies = props.movies.Search
   const [movieList, setMoviesList] = useState(movies)
@@ -70,9 +65,6 @@ export async function getStaticProps(){
   const data = await response.json()
 
   
-  
-   
- 
   return{
     props: {
       movies: data,
