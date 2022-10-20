@@ -42,6 +42,7 @@
     color: white;
     min-width: 200px;
     max-height: 250px;
+    margin-bottom: 0.2em;
   
   } 
   
@@ -55,6 +56,7 @@
     padding-left: 7px;  
     background-color: #1E2946;
     color: white;
+    
     
   } 
   
@@ -119,7 +121,7 @@
    input[type="submit"]:hover{
     background-color: rgb(118, 29, 29);
     color: antiquewhite;
-    margin-top: 1em;
+   
   }
 
   .movie-button button {
