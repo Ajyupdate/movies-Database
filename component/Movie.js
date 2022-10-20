@@ -27,7 +27,7 @@ const Movie = ({ movie}) => {
           </a>
         </Link>
 
-        <h4 className='type'>Movie Type: {movie.Type}</h4>
+        <h4 className='type'>Movie Type: <i>{movie.Type}</i></h4>
 
         <Link href={`/${movie.Title}`}>
           <a>
