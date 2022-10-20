@@ -27,15 +27,17 @@ const Movie = ({ movie}) => {
           </a>
         </Link>
 
+        <h4 className='type'>Movie Type: {movie.Type}</h4>
+
         <Link href={`/${movie.Title}`}>
-        <a>
-          <div className='movie-button'>
-            <button type='button'>See Details</button>
-          </div>
-        </a>
+          <a>
+            <div className='movie-button'>
+              <button type='button'>See Details</button>
+            </div>
+          </a>
         </Link>
         
-        <p>({movie.Year})</p>
+        
     </div>
     // </Link>
   )

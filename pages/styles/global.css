@@ -27,6 +27,9 @@
     font-size: large;
   }
   
+  .type{
+    color: white;
+  }
 
 
   .box{
@@ -116,6 +119,7 @@
    input[type="submit"]:hover{
     background-color: rgb(118, 29, 29);
     color: antiquewhite;
+    margin-top: 1em;
   }
 
   .movie-button button {
