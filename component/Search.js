@@ -44,7 +44,7 @@ const Search = (props) => {
                 />                
             </div>
             <Link href={`/search/${searchValue}`}>
-                <input type="submit" className="" value='Searchh'/> 
+                <input type="submit" className="" value='Search'/> 
             </Link>
         </form>
 
