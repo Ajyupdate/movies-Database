@@ -15,7 +15,7 @@ const Movie = ({ movie}) => {
         <h4 className="movie-title">{movie.Title}</h4>
         
         <Link href={`/${movie.Title}`}>
-          <a>
+         
             <div className="movie-details">
                 <img
                     width="300"
@@ -24,17 +24,17 @@ const Movie = ({ movie}) => {
                     src={poster}
                 />
             </div>
-          </a>
+          
         </Link>
 
         <h4 className='type'>Movie Type: <i>{movie.Type}</i></h4>
 
         <Link href={`/${movie.Title}`}>
-          <a>
+          
             <div className='movie-button'>
               <button type='button'>See Details</button>
             </div>
-          </a>
+          
         </Link>
         
         
