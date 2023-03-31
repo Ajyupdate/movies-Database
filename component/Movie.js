@@ -16,6 +16,7 @@ const Movie = ({ movie}) => {
         
         <Link href={`/${movie.Title}`}>
          
+         
             <div className="movie-details">
                 <img
                     width="300"
