@@ -25,33 +25,29 @@ const Search = (props) => {
       <div>
         <form className='search'>
            
-            {/* <input
-                value={searchValue}
-                onChange={handleSearchInputChanges}
-                type="text"
-            />
-             <Link href={`/search/${searchValue}`}>
-            <input  type="submit" value="SEARCH"/>
-            </Link> */}
+            
+
 
             <div className="box">
-                
+
+            
                 <input className='InputText text-white' 
                  value={searchValue}
                  onChange={handleSearchInputChanges}
                  type="text"
                  placeholder='Search Movie'
-                />                
+                />         
+                
             </div>
+
+            <div className='box-button'>
             <Link href={`/search/${searchValue}`}>
                 <input type="submit" className="" value='Search'/> 
             </Link>
+            </div>
+            
         </form>
 
-        {/* <div>
-            {searchValue}
-        </div> */}
-    
 
     </div>
   )

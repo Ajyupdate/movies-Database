@@ -40,9 +40,9 @@
     align-items: center;
     padding: 10px; 
     color: white;
-    min-width: 200px;
-    max-height: 250px;
-    margin-bottom: 0.4em;
+    min-width: 300px;
+    max-height: 300px;
+     margin-bottom: 0.4em; 
   
   } 
   
@@ -57,9 +57,10 @@
     background-color: #1E2946;
     color: white;
     
-    
   } 
-  
+  .box-button{
+   display: none;
+  }
   
   /* new css for movie component */
   
@@ -132,19 +133,7 @@
     border-radius: 10px;
   }
   
-   /* .search > input[type="text"]{
-    width: 40%;
-    min-width: 170px;
-    border-radius: 1%;
-    background-color: rgb(118, 29, 29);;
-  }  */
-
-  
-  /* [movie] styles */
-
-  /* body{
-    background-color: rgb(7, 3, 27);
-  } */
+   
   .detail{
     background-color: rgb(7, 3, 27);
     color: white;
@@ -204,7 +193,7 @@
    .searched-img{
     margin-top: 1em;
    }
-    
+   
     
   }
   @media screen and (min-width: 652px) and (max-width: 693) {
@@ -214,6 +203,7 @@
     .searched-img{
       margin-top:2em;
      }    
+     
   }
   
   @media screen and (max-width: 651px) {
@@ -224,6 +214,7 @@
       .searched-img{
         margin-top:2em;
        }
+       
       
   }
   @media screen and (max-width: 600px) {
@@ -231,6 +222,7 @@
     width: 100%;
     
   } 
+  
     
     .content, .row{
       display: block;
