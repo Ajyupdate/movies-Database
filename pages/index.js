@@ -3,10 +3,7 @@ import { useState } from "react"
 import Header from "../component/Header"
 import Movie from "../component/Movie"
 import Search from "../component/Search"
-// import Aos from "aos"
-// import 'aos/dist/aos.css';
-import Head from "next/head"
-import Loading from "../component/Loading"
+import { motion, AnimatePresence } from "framer-motion"
 
 
 // if (typeof window !== 'undefined') {
@@ -28,27 +25,32 @@ function Home (props){
   
     return (
       <>
-        
-        <div className='App' >
-          {/* <Head>
-            <title>Movie Database</title>
-            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          </Head> */}
-          <Header title="Movie Database"/>
-          <Search/>
-  
-          <div className='movies' >
-            {movieList.map((movie) =>(
-              <div key={movie.imdbID}>
-              
-                <Movie movieList={movieList} movie={movie} Title={movie.Title}/>
-              
-              </div>
-            ))}
-          </div>
+        <AnimatePresence>
+          <motion.div className='App'
+            initial={{ opacity: 0, y:15}}
+            animate={{ opacity: 1, y:0}}
+            exist={{ opacity: 0, y:15}}
+            transition={{ delay: 0.25}}
+          >
+            
+            <Header title="Movie Database"/>
+            <Search/>
+    
+            <div className='movies' >
+              {movieList.map((movie) =>(
+                <div key={movie.imdbID}>
+                
+                  <Movie movieList={movieList} movie={movie} Title={movie.Title}/>
+                
+                </div>
+              ))}
+            </div>
+            
           
+          </motion.div>
+        </AnimatePresence>
         
-      </div>
+        
       </>
     )
   
